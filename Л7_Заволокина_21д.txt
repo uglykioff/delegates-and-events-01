@@ -1,0 +1,15 @@
+namespace Events
+{
+    internal class Prograam
+    {
+        static void Main(string[] args)
+        {
+            Timer timer = new();
+            Clock clock = new();
+
+            timer.TimeChangeEvent += clock.Parsetime;
+
+            timer.Start();
+        }
+    }
+}
